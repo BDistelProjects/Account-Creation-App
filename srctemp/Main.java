@@ -50,7 +50,7 @@ public class Main {
         boolean ui = false;
         Scanner scanner = new Scanner(System.in);
         while (!ui){
-            System.out.print("\n\nWelcome "+ tUsername+"!\nWhat would you like to do? :");
+            System.out.print("\n\nWelcome "+ tUsername+"!\nWhat would you like to do?\n(Change Password, Logout)\n");
             String rply = scanner.nextLine().toLowerCase();
             switch (rply){
                 case "logout":
@@ -73,7 +73,7 @@ public class Main {
                             System.out.print("\n\n\nPassword successfully changed!");
                             break;
                         }
-            }
+                }
             }
         }
     }
