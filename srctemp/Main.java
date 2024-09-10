@@ -7,7 +7,7 @@ public class Main {
         int exit = 0;
         while (exit == 0) { //Initialize our UI (Program will stop running if exit == 1)
             Scanner scanner = new Scanner(System.in);
-            System.out.print("\nWelcome to 'EXAMPLE SITE'\n\n Login to Continue:\n\n");
+            System.out.print("\nWelcome to 'EXAMPLE SITE'\n");
             System.out.println("\n(Login) (Create an Account)\n");
             String sel = scanner.nextLine().toLowerCase();
             switch (sel) {
@@ -40,11 +40,24 @@ public class Main {
     }
 
     public static void loginAccount(HashMap<String, String> cred, String tUsername, String tPassword) {
-        if (cred.containsKey(tUsername) && (cred.containsValue(tPassword))){
-            System.out.print("\n\nLogged in!\n\n");
-        }
-        else {
+        if (cred.containsKey(tUsername) && (cred.containsValue(tPassword))) {
+            inAccount(cred,tUsername);
+        } else {
             System.out.print("\nAccount invalid.\n\n");
         }
     }
+    public static void inAccount(HashMap<String, String> cred, String tUsername){
+        boolean ui = false;
+        Scanner scanner = new Scanner(System.in);
+        while (!ui){
+            System.out.print("Welcome "+ tUsername+"\nWhat would you like to do?");
+            String rply = scanner.nextLine();
+            switch (rply){
+                case "quit":
+                    
+                    break;
+            }
+        }
+    }
 }
+
