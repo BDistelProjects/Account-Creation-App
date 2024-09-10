@@ -7,8 +7,8 @@ public class Main {
         int exit = 0;
         while (exit == 0) { //Initialize our UI (Program will stop running if exit == 1)
             Scanner scanner = new Scanner(System.in);
-            System.out.print("\nWelcome to 'EXAMPLE SITE'\n Login to Continue:\n\n");
-            System.out.println("\n(Login) (Create an Account)");
+            System.out.print("\nWelcome to 'EXAMPLE SITE'\n\n Login to Continue:\n\n");
+            System.out.println("\n(Login) (Create an Account)\n");
             String sel = scanner.nextLine().toLowerCase();
             switch (sel) {
                 case "login":
@@ -35,16 +35,16 @@ public class Main {
             System.out.print("Your account was successfully created!");
         }
         else {
-            System.out.print("\nUser name already exists");
+            System.out.print("\nAccount already exists..\n");
         }
     }
 
     public static void loginAccount(HashMap<String, String> cred, String tUsername, String tPassword) {
         if (cred.containsKey(tUsername) && (cred.containsValue(tPassword))){
-            System.out.print("Logged in!");
+            System.out.print("\n\nLogged in!\n\n");
         }
         else {
-            System.out.print("\nAccount does not exist.\n\n");
+            System.out.print("\nAccount invalid.\n\n");
         }
     }
 }
