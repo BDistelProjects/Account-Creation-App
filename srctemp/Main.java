@@ -50,7 +50,7 @@ public class Main {
         boolean ui = false;
         Scanner scanner = new Scanner(System.in);
         while (!ui){
-            System.out.print("\n\nWelcome "+ tUsername+"\nWhat would you like to do?");
+            System.out.print("\n\nWelcome "+ tUsername+"!\nWhat would you like to do? :");
             String rply = scanner.nextLine().toLowerCase();
             switch (rply){
                 case "logout":
@@ -62,15 +62,17 @@ public class Main {
                     System.out.print("\nConfirm password:");
                     String newpasc = scanner.nextLine();
                     while (!(newpas.equals(newpasc))){
-                        System.out.print("\nPASSWORDS DO NOT MATCH. TRY AGAIN.\n:");
+                        System.out.print("\nPASSWORDS DO NOT MATCH. TRY AGAIN.\n");
                         System.out.print("\nNew password:");
                         newpas = scanner.nextLine();
                         System.out.print("\nConfirm password:");
                         newpasc = scanner.nextLine();
-                    cred.remove(tUsername);
-                    cred.put(tUsername, newpas);
-                    System.out.print("\n\n\nPassword successfully changed!");
-                    break;
+                        if (newpas.equals(newpasc)) {
+                            cred.remove(tUsername);
+                            cred.put(tUsername, newpas);
+                            System.out.print("\n\n\nPassword successfully changed!");
+                            break;
+                        }
             }
             }
         }
