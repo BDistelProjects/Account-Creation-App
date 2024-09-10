@@ -7,7 +7,7 @@ public class Main {
         int exit = 0;
         while (exit == 0) { //Initialize our UI (Program will stop running if exit == 1)
             Scanner scanner = new Scanner(System.in);
-            System.out.print("Welcome to 'EXAMPLE SITE'\n Login to Continue:\n\n");
+            System.out.print("\nWelcome to 'EXAMPLE SITE'\n Login to Continue:\n\n");
             System.out.println("\n(Login) (Create an Account)");
             String sel = scanner.nextLine().toLowerCase();
             switch (sel) {
